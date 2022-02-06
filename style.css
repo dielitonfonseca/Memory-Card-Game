@@ -1,0 +1,142 @@
+body {
+    box-sizing: border-box;
+    background-color: #eef9bf;
+    font-family: "Righteous", cursive;
+    font-family: "Roboto", sans-serif;
+}
+
+.content{
+    width: 100%;
+    height: 100%;
+}
+
+.title-container{
+    padding-top:40px;
+    width: 100%;
+    text-align: center;
+
+}
+
+h1 {
+    color: #75b79e;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 56px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 66px;
+    letter-spacing: -0.004em;
+}
+
+.cards-container {
+    padding-top: 50px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card {
+    display: flex;
+    transform-style: preserve-3d;
+    height: 146px;
+    width: 117px;
+    margin: 10px;
+    position: relative;
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    background-color: #a7e9af;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card-face img {
+    width: 100%;
+}
+
+.back-face {
+    transform: rotateY(180deg);
+}
+
+.show-card {
+    transition-duration: 1000ms;
+    transform: rotateY(-180deg);
+}
+
+.par-ready {
+    transform: rotateY(-180deg);
+}
+
+.show {
+    display: flex;
+}
+
+.counter-container{
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    margin-left: 96%;
+    background-color: #c1cc20;
+    width: 60px;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+.plays-container{
+    padding-top: 5px;
+    text-align: center;
+    font-size: 10px;
+    position: absolute;
+    margin-top: 4%;
+    margin-left: 96%;
+    background-color: #c1cc20;
+    width: 60px;
+    top: 10px;
+    right: 10px;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+
+.counter, .play-counter{
+    font-size: 30px;
+}
+.text{
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.counter, .text{
+margin-top:10px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0px;
+}
+
+
+@media (max-width:700px){
+    .cards-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .plays-container{
+        margin-top: 80px;
+    }
+}
